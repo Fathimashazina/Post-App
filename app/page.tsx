@@ -21,7 +21,6 @@ export default function Home() {
       const { data } = await axios.post("/api/auth/login", payload);
       setAlert({ type: "success", message: "Login successful!" });
       setTimeout(() => push("/dashboard"), 1500);
-
     } catch (e) {
       const error = e as AxiosError;
       setAlert({ type: "error", message: error.message || "Login failed" });
@@ -29,15 +28,16 @@ export default function Home() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-pink-200">
-      <div className="w-96 p-6 shadow-lg bg-white rounded-md">
-        <h1 className="text-3xl block text-center font-semibold mb-3">
-          <i className="fa-solid fa-user"></i> Login
+    <div className="flex justify-center items-center min-h-screen bg-pink-200 px-4">
+      <div className="w-full max-w-sm p-6 shadow-lg bg-white rounded-lg">
+        <h1 className="text-2xl md:text-3xl text-center font-semibold mb-5 flex items-center justify-center gap-2">
+          <i className="fa-solid fa-user text-pink-500"></i>
+          Login
         </h1>
 
         {alert && (
           <div
-            className={`mt-4 p-3 rounded-md text-sm font-medium ${
+            className={`mt-4 p-3 rounded-md text-sm md:text-base font-medium ${
               alert.type === "success"
                 ? "bg-green-100 text-green-800 border border-green-400"
                 : "bg-red-100 text-red-800 border border-red-400"
@@ -47,47 +47,34 @@ export default function Home() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit}>
-          <div className="mt-3">
-            <label htmlFor="username" className="block text-base mb-2">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <label htmlFor="username" className="block text-sm md:text-base mb-2">
               Username
             </label>
             <input
               type="text"
               id="username"
               name="username"
-              className="
-              w-full text-base px-2 py-1
-              border-0 border-b border-gray-400
-              focus:outline-none focus:ring-0
-              focus:border-b-2 focus:border-gray-600"
+              className="w-full text-base px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
           </div>
-          <div className="mt-3">
-            <label htmlFor="password" className="block text-base mb-2">
+          <div>
+            <label htmlFor="password" className="block text-sm md:text-base mb-2">
               Password
             </label>
             <input
               type="password"
               id="password"
               name="password"
-              className="
-              w-full text-base px-2 py-1
-              border-0 border-b border-gray-400
-              focus:outline-none focus:ring-0
-              focus:border-b-2 focus:border-gray-600"
+              className="w-full text-base px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
               required
             />
           </div>
-          <div className="mt-5"></div>
           <button
             type="submit"
-            className="
-            border-2 border-pink-400 
-            bg-pink-400 text-white py-1 w-full 
-            rounded-md hover:bg-transparent hover:text-gray-800 
-            font-semibold"
+            className="border-2 border-pink-400 bg-pink-400 text-white py-2 w-full rounded-md hover:bg-transparent hover:text-gray-800 font-semibold transition-colors"
           >
             Login
           </button>
