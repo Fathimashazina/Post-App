@@ -23,7 +23,7 @@ export default function Home() {
       setTimeout(() => push("/dashboard"), 1500);
     } catch (e) {
       const error = e as AxiosError;
-      setAlert({ type: "error", message: error.message || "Login failed" });
+      setAlert({ type: "error", message: "Invalid Credentials"  });
     }
   };
 
