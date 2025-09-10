@@ -20,7 +20,7 @@ export default function Post({ id, content, createdAt }: PostProps) {
   return (
     <div
       className="w-full max-w-md rounded-lg shadow-2xl p-4 mb-4
-    bg-gradient-to-br from-blue-400 via-blue-100 to-white
+    bg-gradient-to-br from-pink-400 via-pink-100 to-white
     bg-opacity-30 backdrop-blur-md border border-white/30
     transform transition-transform duration-300 ease-in-out
     hover:scale-105 hover:shadow-lg"

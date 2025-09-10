@@ -19,11 +19,11 @@ export default function PostList() {
 
   return (
     <div
-      className="flex justify-center min-h-screen bg-sky-200
+      className="flex justify-center min-h-screen bg-pink-200
      pt-10"
     >
       <div className="w-1/2 ">
-        <div className="w-full sticky top-0 bg-sky-200 rounded-2xl z-10 p-4 ">
+        <div className="w-full sticky top-0 bg-pink-200 rounded-2xl z-10 p-4 ">
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}

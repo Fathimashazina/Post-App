@@ -28,7 +28,7 @@ export default function DashboardLayout({
   }, [router]);
   if (!isSuccess) {
     return (
-      <div className="flex justify-center items-center min-h-screen bg-sky-200 pt-10">
+      <div className="flex justify-center items-center min-h-screen bg-pink-200 pt-10">
         <p className="text-gray-800 text-2xl">Loading...</p>
       </div>
     );

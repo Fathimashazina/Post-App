@@ -21,6 +21,7 @@ export default function Home() {
       const { data } = await axios.post("/api/auth/login", payload);
       setAlert({ type: "success", message: "Login successful!" });
       setTimeout(() => push("/dashboard"), 1500);
+
     } catch (e) {
       const error = e as AxiosError;
       setAlert({ type: "error", message: error.message || "Login failed" });
@@ -28,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-sky-200">
+    <div className="flex justify-center items-center h-screen bg-pink-200">
       <div className="w-96 p-6 shadow-lg bg-white rounded-md">
         <h1 className="text-3xl block text-center font-semibold mb-3">
           <i className="fa-solid fa-user"></i> Login
@@ -83,8 +84,8 @@ export default function Home() {
           <button
             type="submit"
             className="
-            border-2 border-sky-400 
-            bg-sky-400 text-white py-1 w-full 
+            border-2 border-pink-400 
+            bg-pink-400 text-white py-1 w-full 
             rounded-md hover:bg-transparent hover:text-gray-800 
             font-semibold"
           >
