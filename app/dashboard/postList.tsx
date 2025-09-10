@@ -22,7 +22,7 @@ export default function PostList() {
       className="flex justify-center min-h-screen bg-pink-200
      pt-10"
     >
-      <div className="w-1/2 ">
+      <div className="w-full ">
         <div className="w-full sticky top-0 bg-pink-200 rounded-2xl z-10 p-4 ">
           <input
             value={input}
