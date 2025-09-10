@@ -31,7 +31,7 @@ export default function Home() {
     <div className="flex justify-center items-center min-h-screen bg-pink-200 px-4">
       <div className="w-full max-w-sm p-6 shadow-lg bg-white rounded-lg">
         <h1 className="text-2xl md:text-3xl text-center font-semibold mb-5 flex items-center justify-center gap-2">
-          <i className="fa-solid fa-user text-pink-500"></i>
+          <i className="fa-solid fa-user"></i>
           Login
         </h1>
 
