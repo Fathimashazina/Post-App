@@ -35,7 +35,7 @@ export default function Post({ id, content, createdAt }: PostProps) {
       hover:scale-105 hover:shadow-lg"
     >
       <div className="flex items-start mb-3 gap-2">
-        <i className="fa-solid fa-message text-pink-500 text-sm sm:text-base"></i>
+        <i className="fa-solid fa-message text-sm sm:text-base"></i>
         <div className="text-xs sm:text-sm flex flex-col">
           <p className="text-gray-800 font-semibold leading-none">Admin</p>
           <p className="text-gray-600 text-[10px] sm:text-xs">
